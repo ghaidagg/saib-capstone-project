@@ -2,7 +2,7 @@ package com.saib.models;
 
 import java.time.LocalDateTime;
 
-public class account {
+public class Account {
 	private long account_id;
 	private String name;
 	private String gender;
@@ -17,13 +17,13 @@ public class account {
 	private String status;
 	
 	
-	public account() {
+	public Account() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "account [account_id=" + account_id + ", name=" + name + ", gender=" + gender + ", email=" + email
+		return "Account [account_id=" + account_id + ", name=" + name + ", gender=" + gender + ", email=" + email
 				+ ", phone=" + phone + ", address=" + address + ", accountType=" + accountType + ", balance=" + balance
 				+ ", creditLimit=" + creditLimit + ", creationDate=" + creationDate + ", lastUpdated=" + lastUpdated
 				+ ", status=" + status + "]";
@@ -100,7 +100,7 @@ public class account {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public account(long account_id, String name, String gender, String email, String phone, String address,
+	public Account(long account_id, String name, String gender, String email, String phone, String address,
 			String accountType, double balance, double creditLimit, LocalDateTime creationDate,
 			LocalDateTime lastUpdated, String status) {
 		super();
