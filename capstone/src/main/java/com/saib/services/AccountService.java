@@ -4,12 +4,17 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.saib.models.Account;
+import com.saib.repository.AccountRepository;
 
 @Service
 public class AccountService {
+	
+	@Autowired
+	AccountRepository accountRepository;
 	
 	public List<Account> getAllAccount()
 	{
@@ -23,6 +28,14 @@ public class AccountService {
 		
 		return list;
 		
+	}
+	
+	
+	public String addAccount(Account account)
+	{
+		Account storedAccount=accountRepository.save(account);
+		
+		return null;
 	}
 
 }
