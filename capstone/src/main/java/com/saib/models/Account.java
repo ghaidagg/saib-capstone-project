@@ -4,8 +4,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,8 +12,7 @@ import javax.persistence.Table;
 @Table(name = "account")
 public class Account {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "account_number")
+	@Column(name="account_number")
 	private long accountNumber;
 	
 	@Column(name="name")
@@ -32,13 +30,13 @@ public class Account {
 	@Column(name="address")
 	private String address;
 	
-	@Column(name="account_type")
+	@Column(name="accounttype")
 	private String accountType;
 	
 	@Column(name="balance")
 	private double balance;
 	
-	@Column(name="credit_limit")
+	@Column(name="creditlimit")
 	private double creditLimit;
 	
 	@Column(name="creation_date")
