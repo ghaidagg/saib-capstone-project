@@ -81,8 +81,8 @@ public class TransactionService {
 
 
 
-	public List<Transaction> getTransactionByDate(String date) {
-		List<Transaction> list = transactionRepository.findByDate(LocalDate.parse(date));	
+	public List<Transaction> getTransactionByDate(LocalDate date) {
+		List<Transaction> list = transactionRepository.findByDate( date);	
 		return list;
 	}
 
@@ -129,9 +129,9 @@ public class TransactionService {
 
 
 
-	public List<Transaction> getTransactionByTypeAndDate(String type, String date) {
+	public List<Transaction> getTransactionByTypeAndDate(String type, LocalDate date) {
 	
-		List<Transaction> list=transactionRepository.findByTransactionTypeAndDate(type ,LocalDate.parse(date));
+		List<Transaction> list=transactionRepository.findByTransactionTypeAndDate(type , date);
 		return list;
 	}
 

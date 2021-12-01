@@ -117,10 +117,10 @@ public class Transaction {
 	public void setSameBankTransaction(boolean sameBankTransaction) {
 		this.sameBankTransaction = sameBankTransaction;
 	}
-	public String getOtherBank() {
+	public String getotherBank() {
 		return otherBank;
 	}
-	public void setOther_bank(String otherBank) {
+	public void setotherBank(String otherBank) {
 		this.otherBank = otherBank;
 	}
 	public double getAmount() {
@@ -144,7 +144,7 @@ public class Transaction {
 	public String gettransactionType () {
 		return transactionType;
 	}
-	public void settransactiontype(String transactionType ) {
+	public void settransactionType(String transactionType ) {
 		this.transactionType  = transactionType ;
 	}
 	public String getStatus() {
@@ -158,7 +158,7 @@ public class Transaction {
 	public String toString() {
 		return "Transaction [transaction_id=" + transactionid + ", from_account=" + fromAccount + ", to_account="
 				+ toAccount + ", from_account_name=" + fromAccountName + ", to_account_name=" + toAccountName
-				+ ", same_bank_transaction=" + sameBankTransaction + ", other_bank=" + otherBank + ", amount="
+				+ ", same_bank_transaction=" + sameBankTransaction + ", otherBank=" + otherBank + ", amount="
 				+ amount + ", date=" + date + ", time=" + time + ", transactionType  =" + transactionType  + ", status="
 				+ status + "]";
 	}

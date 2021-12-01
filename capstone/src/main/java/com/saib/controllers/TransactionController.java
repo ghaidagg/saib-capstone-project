@@ -3,9 +3,11 @@ package com.saib.controllers;
 
 
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -71,7 +73,7 @@ public class TransactionController {
 	
 	
 	@GetMapping("/transactions/getByDate/{date}")
-	public ResponseEntity<ApiSuccessPayload> getTransactionByDate(@PathVariable String date)
+	public ResponseEntity<ApiSuccessPayload> getTransactionByDate(@PathVariable @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) LocalDate date)
 	{
 
 		List<Transaction> list = transactionService.getTransactionByDate(date);
@@ -86,7 +88,7 @@ public class TransactionController {
 	
 	
 	@GetMapping("/transactions/getByTypeAndDate/{transactiontype}/{date}")
-	public ResponseEntity<ApiSuccessPayload> getTransactionByTypeAndDate(@PathVariable String transactiontype ,@PathVariable String date )
+	public ResponseEntity<ApiSuccessPayload> getTransactionByTypeAndDate(@PathVariable String transactiontype ,@PathVariable LocalDate date )
 	{
 
 		List<Transaction> list = transactionService.getTransactionByTypeAndDate(transactiontype , date);
